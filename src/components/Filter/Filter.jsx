@@ -1,28 +1,26 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter } from '../../redux/filterSlice';
-import { Input, Text } from './Filter.styled'
-import { selectFilter } from '../../redux/selectors';
+import { setContactsFilter } from '../../redux/constacts/filterSlice';
+import { selectContactsFilter } from '../../redux/constacts/selectors';
+import { Label, Input } from './Filter.styled';
 
 export const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(selectFilter);
+  const filter = useSelector(selectContactsFilter);
 
-  const onChange = e => {
-    dispatch(setFilter(e.target.value.trim()));
+  const onChangeFilter = ({ currentTarget: { value } }) => {
+   dispatch(setContactsFilter(value));
   };
+
   return (
-    <>    
-      <Text htmlFor="filter-input">
-        Find contacts by name
-        <Input
-          id="filter-input"  
-          type="text"
-          value={filter}
-          onChange={onChange}
-          aria-label="Search contacts by name" 
-        />
-      </Text>
-    </>
+    <Label>
+      <Input
+        type="text"
+        name="filter"
+        placeholder="Enter your contact name"
+        value={filter}
+        onChange={onChangeFilter}
+      />
+    </Label>
   );
 };
 

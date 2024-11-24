@@ -1,24 +1,26 @@
-import styled from "styled-components";
+import styled from '@emotion/styled';
 
-export const Input = styled.input`
-    padding: 5px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 18px;
-    // font-weight: 600;
-    max-width: 250px;
-
+export const Label = styled.label`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
 `;
-
-export const Text = styled.label`
-    
-display: flex;
-flex-direction: column;
-justify-content:center;
-align-items: center;
-font-size: 30px;
-margin-top: 0;
-margin-bottom:5px;
-
+export const Input = styled.input`
+width: 250px;
+padding: 25px 30px;
+color: #000000;
+background: #efefef;
+border-radius: 18px;
+border: 1px solid #efefef;
+:placeholder {
+  
+  color: #757575;
+}
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+:hover,
+:focus {
+  border: 1px solid #000000;
+}
 `;
