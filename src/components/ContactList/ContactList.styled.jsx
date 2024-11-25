@@ -9,6 +9,7 @@ export const ListContact = styled.ul`
   margin-left: auto;
   margin-right: auto;
   // gap: 20px;
+  
 `;
 
 export const ContactItems = styled.li`
@@ -16,6 +17,7 @@ export const ContactItems = styled.li`
   justify-content: space-between;
   align-items: center;
   // margin-bottom: 10px;
+ 
 `;
 export const Text = styled.p`
   display: inline-block;

@@ -61,11 +61,11 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 :hover,
 :focus {
-  color: red;
+  color: white;
   background-color: black;
   border: 1px solid #000000;
   > svg {
-    fill: red;
+    fill: white;
   }
 }
 `;

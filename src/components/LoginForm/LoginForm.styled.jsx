@@ -5,6 +5,12 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  border: 1px solid #efefef;
+  margin:0 auto;
+  margin-top: 50px;
+   background: linear-gradient(45deg, #FF6B6B, #3E8AC5);
   
 `;
 
@@ -21,7 +27,8 @@ export const Input = styled.input`
   width: 250px;
   padding: 25px 30px;
   color: #000000;
-  background: #efefef;
+  // background: #efefef;
+  // ckground-color: light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4));
   border-radius: 18px;
   border: 1px solid #efefef;
   :placeholder {
@@ -40,7 +47,7 @@ export const Button = styled.button`
   margin-top: 20px;
   margin-bottom: 5px;
   padding: 15px 40px;
-  background-color: whitesmoke;
+  // background-color: whitesmoke;
   border: 1px solid black;
   border-radius: 10px;
   cursor: pointer;
@@ -50,18 +57,18 @@ export const Button = styled.button`
 
   :hover,
   :focus {
-    color: red;
+    color: white;
     background-color: black;
     border: 1px solid #000000;
   }
 `;
 
 export const LoggedLink = styled(NavLink)`
-  margin-top: 8px;
-  color: #8f8f8f;
+  margin: 10px 0;
+  color: black;
   cursor: pointer;
   :hover,
   :focus {
-    color: red;
+    color: white;
   }
 `;

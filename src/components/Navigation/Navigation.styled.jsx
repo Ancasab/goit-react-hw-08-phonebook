@@ -17,7 +17,7 @@ export const Link = styled(NavLink)`
   :hover,
   :focus {
     font-weight: 800;
-    color: red;
+    color: white;
     background-color: black;
   }
 `;
@@ -41,7 +41,7 @@ transition: font-weight 250ms cubic-bezier(0.4, 0, 0.2, 1);
 :hover,
 :focus {
 font-weight: 800;
-color: red;
+color: white;
 background-color: black;
 }
 `;

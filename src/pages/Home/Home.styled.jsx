@@ -35,12 +35,14 @@ export const Text = styled.h1`
   margin: 0;
   font-size: 73px;
   text-align: center;
+  font-family: 'Rubik Wet Paint', cursive;
   
 `;
 export const Message = styled.p`
-margin-top: 10px;
-  font-size: 19px;
+  margin-top: 10px;
+  font-size: 30px;
   text-align: center;
+  font-family: 'Rubik Wet Paint', cursive;
   
 `; 
 

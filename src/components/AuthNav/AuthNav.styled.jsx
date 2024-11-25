@@ -9,18 +9,21 @@ export const NavList = styled.ul`
 export const NavItem = styled.li``;
 
 export const NavigationLink = styled(NavLink)`
-  display: block;
+font-family: 'Rubik Wet Paint', cursive;  
+display: block;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 30px;
   padding: 15px 30px;
-  color: black;
+  color: #000000;;
   background-color: whitesmoke;
   border-radius: 10px;
   transition: background-color 300ms cubic-bezier(0.25, 0.1, 0.25, 1),
   color 300ms cubic-bezier(0.25, 0.1, 0.25, 1); 
   :hover,
   :focus {
-    color: red;
-    background-color: black;
+    color: white;
+    background-color: #86b0ff;
+    // background-color: black;
+    
   }
 `;

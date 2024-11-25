@@ -7,7 +7,7 @@ const Home = () => {
       <ImageBackground imageUrl={image} />
       <TextWrapper>
         <Text>PhoneBook</Text>
-        <Message>Hello. If you want to use the PhoneBook, please login to your account.</Message>
+        <Message>If you want to use the PhoneBook, please register / login to your account.</Message>
     </TextWrapper>
     </Container>
   );

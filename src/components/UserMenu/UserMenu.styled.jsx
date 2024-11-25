@@ -25,7 +25,7 @@ export const UserName = styled.p`
 
   text-align: right;
 
-  color: #000000;
+  color: white;
 `;
 export const UserEmail = styled.p`
   font-style: normal;
@@ -34,13 +34,14 @@ export const UserEmail = styled.p`
 
   text-align: right;
 
-  color: black;
+  color: white;
 `;
 
 
 export const LogOutBtn = styled.button`
+font-family: 'Rubik Wet Paint', cursive;
 font-weight: 600;
-font-size: 20px;
+font-size: 30px;
 margin-top: 20px;
 margin-bottom: 5px;
 padding: 15px 40px;
@@ -54,8 +55,8 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 :hover,
 :focus {
-  color: red;
-  background-color: black;
+  color: white;
+  background-color: #86b0ff;
   border: 1px solid #000000;
 }
 `;

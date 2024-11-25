@@ -4,15 +4,15 @@ import { FaUserPlus } from 'react-icons/fa';
 export const AddUserIcon = styled(FaUserPlus)`
   width: 20px;
   height: 20px;
-
+  
   fill: black;
 `;
 export const PageContainer = styled.div`
-  padding: 20px 20px;
+  padding: 40px 40px;
   height: 100vh;
 
  
-  background: radial-gradient(circle, #FFD700, #FF6B6B, #3E8AC5);
+  // background: radial-gradient(circle, #FFD700, #FF6B6B, #3E8AC5);
 `;
 export const Wrapper = styled.div`
   display: flex;
@@ -23,7 +23,7 @@ export const Title = styled.h2`
 font-family: 'Rubik Wet Paint', cursive; 
   font-weight: 700;
   font-size: 50px;
-
+  
   margin-left: 20px;
 `;
 
@@ -80,11 +80,11 @@ export const Button = styled.button`
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   :hover,
   :focus {
-    color: red;
+    color: white;
     background-color: black;
     border: 1px solid #000000;
     > svg {
-      fill: red;
+      fill: white;
     }
   }
 `;

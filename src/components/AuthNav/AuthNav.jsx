@@ -7,7 +7,7 @@ const AuthNav = () => {
         <NavigationLink to="login">Log In</NavigationLink>
       </NavItem>
       <NavItem>
-        <NavigationLink to="register">Sign up</NavigationLink>
+        <NavigationLink to="register">Register</NavigationLink>
       </NavItem>
     </NavList>
   );
