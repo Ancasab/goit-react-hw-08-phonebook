@@ -7,14 +7,14 @@ import { useState } from 'react';
 const RegisterForm = () => {
   const dispatch = useDispatch();
 
-  // Stare pentru încărcare (loading state)
+  // State for loading
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.currentTarget;
 
-    // Setează starea de încărcare la true când se trimite formularul
+    // Set loading state to true when submitting
     setIsSubmitting(true);
 
     try {
@@ -26,15 +26,15 @@ const RegisterForm = () => {
         })
       ).unwrap();
 
-      // Dacă înregistrarea este un succes
+      // If registration is successful
       Notify.success(`${result.user.name} welcome!`);
       form.reset();
     } catch (error) {
-      // Mesaj de eroare mai detaliat în funcție de răspunsul de la server
+      // Detailed error message based on server response
       const errorMessage = error.response?.data?.message || "Sorry, something's wrong";
       Notify.failure(errorMessage);
     } finally {
-      // Resetează starea de încărcare după ce procesul s-a încheiat
+      // Reset loading state after completion
       setIsSubmitting(false);
     }
   };
@@ -47,7 +47,7 @@ const RegisterForm = () => {
         <Input
           type="text"
           name="name"
-          pattern="^[a-zA-Zа-яА-Я]+([ '-][a-zA-Zа-яА-Я]+)*$"
+          pattern="^[a-zA-Zа-яА-Я]+(?:[ '-][a-zA-Zа-яА-Я]+)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           placeholder="Enter your name"
           required
@@ -88,6 +88,99 @@ const RegisterForm = () => {
 };
 
 export default RegisterForm;
+
+
+
+// import { useDispatch } from 'react-redux';
+// import { register } from '../../redux/auth/operations';
+// import { Form, Input, Label, Button, Text, LoggedLink } from './RegisterForm.styled';
+// import { Notify } from 'notiflix';
+// import { useState } from 'react';
+
+// const RegisterForm = () => {
+//   const dispatch = useDispatch();
+
+//   // Stare pentru încărcare (loading state)
+//   const [isSubmitting, setIsSubmitting] = useState(false);
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     const form = e.currentTarget;
+
+//     // Setează starea de încărcare la true când se trimite formularul
+//     setIsSubmitting(true);
+
+//     try {
+//       const result = await dispatch(
+//         register({
+//           name: form.elements.name.value,
+//           email: form.elements.email.value,
+//           password: form.elements.password.value,
+//         })
+//       ).unwrap();
+
+//       // Dacă înregistrarea este un succes
+//       Notify.success(`${result.user.name} welcome!`);
+//       form.reset();
+//     } catch (error) {
+//       // Mesaj de eroare mai detaliat în funcție de răspunsul de la server
+//       const errorMessage = error.response?.data?.message || "Sorry, something's wrong";
+//       Notify.failure(errorMessage);
+//     } finally {
+//       // Resetează starea de încărcare după ce procesul s-a încheiat
+//       setIsSubmitting(false);
+//     }
+//   };
+
+//   return (
+//     <Form onSubmit={handleSubmit} autoComplete="off">
+//       <Text>Create your account.</Text>
+//       <Label>
+//         Name
+//         <Input
+//           type="text"
+//           name="name"
+//           pattern="^[a-zA-Zа-яА-Я]+([ '-][a-zA-Zа-яА-Я]+)*$"
+//           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+//           placeholder="Enter your name"
+//           required
+//         />
+//       </Label>
+
+//       <Label>
+//         Email
+//         <Input
+//           type="email"
+//           name="email"
+//           pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+//           title="Email may contain letters, numbers, an apostrophe, and must be followed by '@' domain name '.' domain suffix. For example Taras@ukr.ua, adrian@gmail.com, JacobM3rcer@hotmail.com"
+//           placeholder="Enter your email"
+//           required
+//         />
+//       </Label>
+
+//       <Label>
+//         Password
+//         <Input
+//           type="password"
+//           name="password"
+//           pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+//           title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters. For example TgeV23592, 3Greioct."
+//           placeholder="Enter your password"
+//           required
+//         />
+//       </Label>
+
+//       <Button type="submit" disabled={isSubmitting}>
+//         {isSubmitting ? 'Registering...' : 'Register'}
+//       </Button>
+
+//       <LoggedLink to="/login">Already have an account? Log in</LoggedLink>
+//     </Form>
+//   );
+// };
+
+// export default RegisterForm;
 
 
 
