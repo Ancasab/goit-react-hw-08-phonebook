@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import image from '../../images/telephone.jpg';
+import image from '../../images/antique-dial-phone-rotary-black-95536845.jpeg';
 
 export const Container = styled.div`
   position: relative;
@@ -20,13 +20,17 @@ export const ImageBackground = styled.div`
 `;
 
 export const TextWrapper = styled.div`
+display: flex;
+  flex-direction:column;
+  justify-content: space-around;
   position: absolute;
   top: 50%;
-  left: 43%;
+  left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 10px;
   border-radius: 10px;
+  min-height:200px;
   
   
 `;

@@ -22,7 +22,7 @@ const LoginForm = () => {
     } catch (error) {
       Notify.failure('Incorrect login or password');
     } finally {
-      form.reset(); // Reset form after handling success or failure
+      form.reset(); 
     }
   };
 
@@ -44,10 +44,11 @@ const LoginForm = () => {
         <Input
           type="password"
           name="password"
-          pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
-          title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters. For example TgeV23592, 3Greioct."
-          required
+          // Updated, simplified pattern
+          pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_+]).{8,}$"
+          title="Password must contain at least one letter, one number, one special character (e.g. !@#$%^&*), and be at least 8 characters long."
           placeholder="Enter your password"
+          required
         />
       </Label>
       <Button type="submit">Log In</Button>

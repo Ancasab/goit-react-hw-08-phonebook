@@ -66,7 +66,7 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   gap: 14px;
-  width: fit-content;
+  max-width: fit-content;
   padding: 10px;
   margin-left: 15px;
   margin-right: 20px;
