@@ -33,7 +33,8 @@ const LoginForm = () => {
         <Input
           type="email"
           name="email"
-          pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+          // pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+          pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$"
           title="Email may contain letters, numbers, an apostrophe, and must be followed by '@' domain name '.' domain suffix. For example Taras@ukr.ua, adrian@gmail.com, JacobM3rcer@hotmail.com"
           required
           placeholder="Enter your email"
@@ -45,7 +46,8 @@ const LoginForm = () => {
           type="password"
           name="password"
           // Updated, simplified pattern
-          pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_+]).{8,}$"
+          // pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_+]).{8,}$"
+          pattern="^(?=.*[A-Za-z])(?=.*\\d)(?=.*[!@#$%^&*()_+]).{8,}$"
           title="Password must contain at least one letter, one number, one special character (e.g. !@#$%^&*), and be at least 8 characters long."
           placeholder="Enter your password"
           required

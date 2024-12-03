@@ -48,7 +48,9 @@ const RegisterForm = () => {
         <Input
           type="text"
           name="name"
-          pattern="^[a-zA-Zа-яА-Я]+(?:[ '-][a-zA-Zа-яА-Я]+)*$"
+          // pattern="^[a-zA-Zа-яА-Я]+(?:[ '-][a-zA-Zа-яА-Я]+)*$"
+          pattern="^[a-zA-Zа-яА-Я]+(?:[\\s'-][a-zA-Zа-яА-Я]+)*$"
+          // pattern="^[a-zA-Z]+$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           placeholder="Enter your name"
           required
@@ -60,10 +62,12 @@ const RegisterForm = () => {
         <Input
           type="email"
           name="email"
-          pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+          // pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+          pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$"
           title="Email may contain letters, numbers, an apostrophe, and must be followed by '@' domain name '.' domain suffix. For example Taras@ukr.ua, adrian@gmail.com, JacobM3rcer@hotmail.com"
           placeholder="Enter your email"
           required
+          autocomplete="username"  // Autocomplete for username/email field
         />
       </Label>
 
@@ -73,10 +77,12 @@ const RegisterForm = () => {
           type="password"
           name="password"
           // Updated, simplified pattern
-          pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_+]).{8,}$"
+          // pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_+]).{8,}$"
+          pattern="^(?=.*[A-Za-z])(?=.*\\d)(?=.*[!@#$%^&*()_+]).{8,}$"
           title="Password must contain at least one letter, one number, one special character (e.g. !@#$%^&*), and be at least 8 characters long."
           placeholder="Enter your password"
           required
+          autocomplete="current-password"  // Autocomplete for password field
         />
       </Label>
 
